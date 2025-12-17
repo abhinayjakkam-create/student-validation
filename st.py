@@ -21,5 +21,11 @@ if choice=="LOGIN":
         cursor.execute("""SELECT * FROM users WHERE
         name=? AND password=?""",(name,password))
         result=cursor.fetchone()
-        #if result
+        if result:
+            st.success("Valid user")
+            st.snow()
+        else:
+            st.error("invalid user")
+           
         
+
